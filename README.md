@@ -5,6 +5,7 @@
 
 [![Cloudflare](https://img.shields.io/badge/Cloudflare-Workers-F38020?style=for-the-badge&logo=Cloudflare)](https://workers.cloudflare.com)
 [![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+[![Version](https://img.shields.io/badge/Version-1.0.0-blue?style=for-the-badge)](https://github.com/dead-man1)
 
 <p align="center">
   <img src="DM-Panel.jpg" width="400" alt="DM Panel UI" />
@@ -12,10 +13,6 @@
 </p>
 
 </div>
-
----
-
-DM Panel is a powerful, stealthy, and modern subscription manager for Cloudflare Workers. It allows you to manage VLESS, VMess, Trojan, Shadowsocks, WireGuard, Hysteria2, TUIC, and Custom JSON configs in a secure and user-friendly interface.
 
 ---
 
@@ -32,23 +29,23 @@ DM Panel is a powerful, stealthy, and modern subscription manager for Cloudflare
 
 ## 🚀 Installation
 
-1. **Create a Worker:** Go to Cloudflare Dashboard > Workers & Pages > Create Application > Create Worker.
-2. **Create KV Namespace:** Go to Workers & Pages > KV > Create a Namespace (e.g., named `KV`).
-3. **Bind KV:** Go to your Worker > Settings > Variables > KV Namespace Bindings.
+1.  **Create a Worker:** Go to Cloudflare Dashboard > Workers & Pages > Create Application > Create Worker.
+2.  **Create KV Namespace:** Go to Workers & Pages > KV > Create a Namespace (e.g., named `KV`).
+3.  **Bind KV:** Go to your Worker > Settings > Variables > KV Namespace Bindings.
     * Variable name: `KV`
     * KV Namespace: Select the one you created.
-4. **Set Environment Variables:** Go to Settings > Variables > Environment Variables. Add:
+4.  **Set Environment Variables:** Go to Settings > Variables > Environment Variables. Add:
     * `PASS`: Your admin password (e.g., `MySecretPass123`).
     * `SUB_PATH`: A secret path for subscription links (e.g., `my-secret-sub-path`).
-5. **Deploy Code:** Copy the content of `worker.js` from this repository and paste it into your Worker's code editor. Save and Deploy.
+5.  **Deploy Code:** Copy the content of `worker.js` from this repository and paste it into your Worker's code editor. Save and Deploy.
 
 ## 📖 Usage
 
-1. **Access Panel:** Open `https://your-worker.workers.dev/panel`.
-2. **Login:** Enter the password you set in the `PASS` variable.
-3. **Add Configs:** Paste your config links (`vless://`, `vmess://`, etc.) or JSON objects and click **Add**.
-4. **Manage Users:** Go to the **Users** tab to create users and assign specific configs.
-5. **Get Links:**
+1.  **Access Panel:** Open `https://your-worker.workers.dev/panel`.
+2.  **Login:** Enter the password you set in the `PASS` variable.
+3.  **Add Configs:** Paste your config links (`vless://`, `vmess://`, etc.) or JSON objects and click **Add**.
+4.  **Manage Users:** Go to the **Users** tab to create users and assign specific configs.
+5.  **Get Links:**
     * Click the **Copy** icon next to each protocol for specific subscriptions.
     * Use the **Universal Subscription** card at the bottom for a mixed link.
 
